@@ -1,20 +1,55 @@
-body, html {
-    margin-top: 0px;
-    font-family: Helvetica;
-    z-index: 100;
+:root {
+    /*      USE:    
+            var()   
+    */
+
+    --font-size-1: 1.3rem;
+
+    --font-family-1: 'Poppins';
+    --font-color-1: rgba(46, 31, 39, 1);
+    --basecolor-1: rgba(190, 186, 180, 1);
+    --basecolor-2: calc(var(--cell-size)* .9 ) ;
 }
 
+
+
+
+body, html {
+    color: var(--font-color-1);
+    margin-top: 0px;
+    font-family: var(--font-family-1);
+    z-index: 100;
+    background-color: var(--basecolor-1);
+
+}
+
+
+.text{
+    font-size: var(--font-size-1);
+}
+
+
 .bookButton{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding: 2% 3% 2% 3%;
+    display: inline-block;
+    width: fit-content;
+    font-family: 0.8 rem;
+    color: var(--font-color-1);
     position: fixed;
-    transform: translate();
+    transform: translate(50%);
     top: 85%;
     right: 50%;
-    padding: 0 0 0 0;
-    background-color: rgba(211, 48, 56, 1);
-    font-weight: normal;
-    color: azure;
+    font-style: italic;
+    background-color: rgba(217, 217, 217, 1);
+    font-weight: bold;
     border: 0px;
-    font-size: 250%;
-    border-radius: 15px;
+    font-size: 2.5rem;
+    border-radius: 50px;
     user-select: none;
+}
+@media screen {
+
+    
 }
