@@ -1,9 +1,13 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+
+
 :root {
     /*      USE:    
             var()   
     */
-
-    --font-size-1: 1.3rem;
+    --font-size-1: 1.5rem;
 
     --font-family-1: 'Poppins';
     --font-color-1: rgba(46, 31, 39, 1);
@@ -16,13 +20,38 @@
 
 body, html {
     color: var(--font-color-1);
-    margin-top: 0px;
+    /* margin-top: 0px; */
+    /* margin-right: 0px;
+    margin-left: 0px; */
+    margin: 1.2em 1em 0 1em;
     font-family: var(--font-family-1);
     z-index: 100;
     background-color: var(--basecolor-1);
 
 }
+.logo-box{
+    margin: 1.2em 1em 0 1.2em;
 
+}
+.logo{
+    font-family: var(--font-family-1);
+    font-weight: bolder;
+    display: inline;
+    margin: 0 0 0 0;
+    font-size: calc(var(--font-size-1)*2);
+}
+.logo2{
+    font-family: var(--font-family-1);
+    font-weight: normal;
+    display: inline;
+    margin: 0 0 0 0;
+    font-size: calc(var(--font-size-1)*2);
+}
+
+.contentbox{
+    position: relative;
+    
+}
 
 .text{
     font-size: var(--font-size-1);
@@ -32,9 +61,9 @@ body, html {
 .bookButton{
     padding-top: 2%;
     padding-bottom: 2%;
-    padding: 2% 3% 2% 3%;
+    padding: 2% 8% 2% 8%;
     display: inline-block;
-    width: fit-content;
+    width: max-content;
     font-family: 0.8 rem;
     color: var(--font-color-1);
     position: fixed;
@@ -44,12 +73,19 @@ body, html {
     font-style: italic;
     background-color: rgba(217, 217, 217, 1);
     font-weight: bold;
-    border: 0px;
-    font-size: 2.5rem;
-    border-radius: 50px;
+    border: 30px;
+    font-size: 2.8rem;
+    border-radius: 100px;
     user-select: none;
 }
-@media screen {
+
+.bookButton:hover {
+    box-shadow: 0px 0px 0px calc(0.5rem ) var(--font-color-1) inset;
+    border-color: var(--font-color-1) ;
+    /* text-shadow: 2px 5px 0px rgba(46, 31, 39, 0.3); */
+}
+
+/* @media all (max-with) {
 
     
-}
+} */
