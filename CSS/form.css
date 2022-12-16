@@ -8,19 +8,33 @@
     --font-color-1: rgba(46, 31, 39, 1);
     --basecolor-1: rgba(190, 186, 180, 1);
     --basecolor-2: calc(var(--cell-size)* .9 ) ;
-}
-body, html {
-    color: var(--font-color-1);
-    /* margin-top: 0px; */
-    /* margin-right: 0px;
-    margin-left: 0px; */
-    margin: 0 1em 0 1em;
-    font-family: var(--font-family-1);
-    z-index: 100;
-    background-color: var(--basecolor-1);
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 
 }
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: var(--font-color-1);
+    font-family: var(--font-family-1);
+    background-color: var(--basecolor-1);
+    padding:15px;
+
+}
+
 .container{
+    max-width: 700px;
+    width: 100%;
+    background:#fff;
+    border-radius: 10px;
+    padding: 25px 30px;
+
     width:90%;
     min-height: 100vh;
     padding-left: 10%;
@@ -31,18 +45,19 @@ body, html {
 
 }
 .logobox{
-    display: flex;
+    width: 100%;
 }
 
 .logo-items{
     width: 100%;
     height: 50px;
+    
 }
 
 .logo{
     font-family: var(--font-family-1);
     font-weight: bolder;
-    text-align: right;
+    text-align: center;
     font-size: calc(var(--font-size-1)*1.8);
 }
 
@@ -51,6 +66,25 @@ body, html {
     font-weight: normal;
     font-size: calc(var(--font-size-1)*1.47);
     /* like static, it relative to the normal position*/
-    position:relative;
-    top: 7px;
+}
+.userdetails{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input-details{
+    width: 40%;
+    margin: 20px 0 10px 0;
+}
+.input-details .detials{
+    margin-bottom: 5px;
+    display: block;
+}
+.input-details input{
+    height: 40px;
+    width: 100%;
+    border-radius:  5px;
+    padding: 10px;
+    font-size: 14px;
 }
