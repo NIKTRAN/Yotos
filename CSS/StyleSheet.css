@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Rubik:wght@400&display=swap&family=Poppins:wght@400');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Rubik:wght@400&display=swap&family=Poppins:wght@400&family=Poppins:wght@300&display=swap');
 :root {
     /*      USE:    
             var()   
@@ -29,22 +29,22 @@ body, html {
 
 }
 .logo-box{    
-
+    text-align: center;
     margin: 2.5em 0 0 0;
 }
 .logo{
     font-family: var(--font-family-1);
     font-weight: bolder;
     display: inline-block;
-    
-    font-size: calc(var(--font-size-1)*1.8);
+
+    font-size: calc(var(--font-size-1)*1.08);
 }
 .logo2{
     font-family: var(--font-family-1);
-    font-weight: normal;
+    font-weight: lighter;
     display: inline-block;
 
-    font-size: calc(var(--font-size-1)*1.47);
+    font-size: calc(var(--font-size-1)*1.047);
 }
 
 .contentbox{
@@ -54,7 +54,7 @@ body, html {
 
 .text{
     font-size: var(--font-size-1);
-    font-weight: normal;
+    font-weight: lighter;
 }
 
 
