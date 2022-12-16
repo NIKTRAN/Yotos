@@ -34,15 +34,7 @@ body{
     background:#fff;
     border-radius: 10px;
     padding: 25px 30px;
-
-    width:90%;
-    min-height: 100vh;
-    padding-left: 10%;
-    padding-right: 10%;
-    box-sizing: border-box;
-    overflow:hidden;
    
-
 }
 .logobox{
     width: 100%;
