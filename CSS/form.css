@@ -38,12 +38,17 @@ body{
 }
 .logobox{
     width: 100%;
+    position: absolute;
+    top: 0%;
+    background-color: #fff;
+    height: 8%;
+    
 }
 
 .logo-items{
     width: 100%;
-    height: 50px;
-    
+    height: 100%;
+    overflow:hidden;
 }
 
 .logo{
@@ -79,4 +84,16 @@ body{
     border-radius:  5px;
     padding: 10px;
     font-size: 14px;
+    border-bottom: 3px solid var(--font-color-1);
 }
+.phototitle{
+    display:inline-block;
+    margin:5px 0 5px 0;
+    border-bottom: 3px solid var(--font-color-1);
+}
+.catogories{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
