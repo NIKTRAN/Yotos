@@ -23,30 +23,38 @@ body{
     align-items: center;
     color: var(--font-color-1);
     font-family: var(--font-family-1);
-    background-color: var(--basecolor-1);
+    background-image: url(/Images/lights.jpg);
+    background-size: cover;
+    background-position: center;
     padding:15px;
 
 }
 
 .container{
-    max-width: 700px;
+    /* max-width: 700px; */
     width: 100%;
-    background:#fff;
+    background: rgb(236, 225, 225);;
     border-radius: 10px;
     padding: 25px 30px;
    
 }
 .logobox{
     width: 100%;
+    position: absolute;
+    top: 0%;
+    background-color:#fed26a;
+    height: 8%;
+    
 }
 
 .logo-items{
     width: 100%;
-    height: 50px;
-    
+    height: 100%;
+    overflow:hidden;
 }
 
 .logo{
+    position: absolute;
     font-family: var(--font-family-1);
     font-weight: bolder;
     text-align: center;
@@ -62,7 +70,7 @@ body{
 .userdetails{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .input-details{
@@ -72,11 +80,65 @@ body{
 .input-details .detials{
     margin-bottom: 5px;
     display: block;
+    font-size: max(2vw,15px);
+    font-weight: var(--font-family-2);
 }
 .input-details input{
     height: 40px;
     width: 100%;
     border-radius:  5px;
     padding: 10px;
-    font-size: 14px;
+    font-size: min(2.5vw, 20px);
+    border:none;
+    border-bottom: 3px solid var(--font-color-1); 
+    background-color: #fff;
+
+}
+.phototitle{
+    display:block;
+    margin:10px 0 10px 0;
+    border-bottom: 3px solid var(--font-color-1);
+    font-size: max(2vw,15px);
+    text-align: center;
+}
+.catogories{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+.phototype .catogories label{
+display: flex;
+align-items: center;
+font-size: max(2vw,15px);
+}
+
+.phototype .catogories .option{
+height: 15px;
+width: 15px;
+background: #fff;
+border-radius: 50%;
+margin-right: 10px;
+border: 4px solid transparent;
+}
+
+#photo-dot:checked ~ .catogories label .one,
+#video-dot:checked ~ .catogories label .two
+{
+    border-color: white;
+    background-color: brown;
+}
+input[type = "radio"]{
+    display: none;
+}
+
+
+.button input{
+    padding:10px;
+    width: 100%;
+    outline:none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #fed26a;
+    font-size: max(2vw,15px);
 }
