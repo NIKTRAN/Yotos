@@ -40,13 +40,30 @@ body, html {
 
 }
 
-.contentscroll-div{
-    width: 100%;
-    height: 80%;
+p{
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+.scroll-content-div{
+    height: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: space-between;
     outline: auto;
+}
+
+.scroll-content-div::after{
+    content: '';
+    display:flex;
+    width: 100%;
+    height: 2px;
+    background-color: blue;
+    /* box-shadow: 0px 0px 80px calc(20.8rem ) var(--basecolor-1); */
+
 }
 
 .cover{
@@ -56,7 +73,7 @@ body, html {
 }
 
 
-.scroll-img{
+.scroll-imgs{
     width: 100%;
     height: 100%;
     display: flex;
@@ -67,17 +84,18 @@ body, html {
     scroll-behavior: smooth;
 
 }
-.child{
+.scroll-items{
     min-width: 100%;
-    height: 165vw;
+    height: 100vh;
     cursor: pointer;
-    border: 1px solid lightblue;
+    /* border: 6px solid blue; */
     overflow: hidden;
 }
 
-.child-img{
+.scroll-img{
+    z-index: 1;
     width: 100%;
-    height: 100%;
+    height: 70%;
     object-fit: cover;
 
 }
@@ -103,17 +121,67 @@ body, html {
 
     font-size: calc(var(--logo-size-1)*1.47);
 }
+.content-post-images{
+    /* margin-top: -60vw; */
+    background-color: var(--basecolor-1);
+    /* box-shadow: 0px 0px 50px calc(8.8rem ) var(--basecolor-1); */
+}
+
+.text-margin{
+    margin: 0 1em 0 1em;
+}
+
+.scroll-texts{
+    color: var(--basecolor-1);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    top: -12em;
+}
 
 
+.scroll-icons{
+    margin-top: auto;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+
+}
 
 .text{
-    margin: 0 1em 0 1em;
     font-size: var(--font-size-1);
     font-weight: normal;
 }
 
+.title{
+
+    font-size: calc(var(--font-size-1) * 2.5);
+    font-weight: bold;
+}
+
+.scroll-texts::after{
+    z-index: -1;
+    position: absolute;
+    content: '';
+    display:flex;
+    background-color: var(--font-color-1);
+    width: 200vw;
+    height: 200vh;
+    right: -50%;
+    top: -3vh;
+    filter: blur(40px);
+    /* box-shadow: 100px 1px 0px 30px black; */
+    /* calc(24.5rem ) var(--basecolor-1) var() */
+}
+
+
+
 
 .bookButton{
+
+    z-index: 5;
 
     padding: 2% 10% 2% 10%;
     display: inline-block;
@@ -122,9 +190,9 @@ body, html {
     color: var(--font-color-1);
     position: fixed;
     transform: translate(50%);
-    top: 85%;
+    top: 89%;
     right: 50%;
- 
+
     background-color: rgba(217, 217, 217, 1);
     font-weight: bold;
     border: 30px;
@@ -145,8 +213,8 @@ body, html {
 
 
 
-
-@media screen and (min-width: 900px) {
+/* and (min-width: 900px) and (min-height: 100px) */
+@media screen and (min-width: 900px) and (min-height: 100px){
     :root {
         /*      USE:    
                 var()   
@@ -168,13 +236,23 @@ body, html {
     
     }
 
-    .contentscroll-div{
+    .scroll-content-div{
         width: 100%;
-        height: 80%;
+        height: calc(95vh - var(--logo-size-1));
         display: flex;
         align-items: center;
         justify-content: space-between;
         outline: auto;
+    }
+    
+    .scroll-content-div::after{
+        content: '';
+        display:flex;
+        width: 100%;
+        height: 2px;
+        background-color: blue;
+        /* box-shadow: 0px 0px 80px calc(20.8rem ) var(--basecolor-1); */
+    
     }
     
     .cover{
@@ -184,9 +262,9 @@ body, html {
     }
     
     
-    .scroll-img{
+    .scroll-imgs{
         width: 100%;
-        height: auto;
+        height: 100%;
         display: flex;
         justify-content: left;
         align-items: center;
@@ -195,26 +273,65 @@ body, html {
         scroll-behavior: smooth;
     
     }
-    .child{
+    .scroll-items{
         min-width: 100%;
-        height: 45vw;
+        height: 100%;
         cursor: pointer;
-        border: 1px solid lightblue;
+        /* border: 6px solid blue; */
         overflow: hidden;
     }
     
-    .child-img{
+    .scroll-img{
+        z-index: 1;
         width: 100%;
         height: 100%;
         object-fit: cover;
+        position: relative;
+        left: 20vw;
     
     }
-    
+    .scroll-texts{
+        color: var(--basecolor-1);
+        width: 32%;
+        transform: translate(50%);
+        left: -12%;
+        top: -69%;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+    }
+    .scroll-texts::before{
+        z-index: -1;
+
+        left: -35%;
+        top: -40vh;
+        position: absolute;
+        content: '';
+        display:flex;
+        width: 50vw;
+        transform-origin: left;
+        height: 120vh;
+        background-color: var(--font-color-1);
+        filter: blur(45px);
+        /* box-shadow: 100px 1px 0px 30px black; */
+        /* calc(24.5rem ) var(--basecolor-1) var() */
+    }
+    .scroll-texts::after{
+
+        opacity: 0;
+
+        /* box-shadow: 100px 1px 0px 30px black; */
+        /* calc(24.5rem ) var(--basecolor-1) var() */
+    }
+
+
 
     .bookButton{
         font-size: var(--button-size-1);
         padding: 1% 10% 1% 10%;
-        top: 84%;
+        top: 86%;
     }
     
 }
