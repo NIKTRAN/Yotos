@@ -53,7 +53,7 @@ p{
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
-    outline: auto;
+    /* outline: auto; */
 }
 
 .scroll-content-div::after{
@@ -128,7 +128,7 @@ p{
 }
 
 .text-margin{
-    margin: 0 1em 0 1em;
+    margin: 0 6.5em 0 6.5em;
 }
 
 .scroll-texts{
@@ -221,7 +221,7 @@ p{
         */
         --font-size-1: 1.2rem;
     
-        --logo-size-1: 2rem;
+        --logo-size-1: 1.8rem;
 
         --button-size-1: calc(var(--logo-size-1)*1);
 
@@ -238,11 +238,11 @@ p{
 
     .scroll-content-div{
         width: 100%;
-        height: calc(95vh - var(--logo-size-1));
+        height: calc(96vh - var(--logo-size-1));
         display: flex;
         align-items: center;
         justify-content: space-between;
-        outline: auto;
+        /* outline: auto; */
     }
     
     .scroll-content-div::after{
@@ -294,7 +294,7 @@ p{
         color: var(--basecolor-1);
         width: 32%;
         transform: translate(50%);
-        left: -12%;
+        left: -16%;
         top: -69%;
         display: flex;
         flex: 1;
@@ -304,18 +304,16 @@ p{
     }
     .scroll-texts::before{
         z-index: -1;
-
-        left: -35%;
-        top: -40vh;
+        left: -59%;
+        top: -85vh;
         position: absolute;
         content: '';
-        display:flex;
-        width: 50vw;
+        display: flex;
+        width: 52vw;
         transform-origin: left;
-        height: 120vh;
+        height: 290vh;
         background-color: var(--font-color-1);
-        filter: blur(45px);
-        /* box-shadow: 100px 1px 0px 30px black; */
+        filter: blur(45px);        /* box-shadow: 100px 1px 0px 30px black; */
         /* calc(24.5rem ) var(--basecolor-1) var() */
     }
     .scroll-texts::after{
