@@ -9,6 +9,8 @@
     
     --logo-size-1: 1.9rem;
 
+    --button-size-1: calc(var(--logo-size-1)*1.40);
+
     --heading-margin: 1em;
 
     --font-family-1: 'Poppins';
@@ -23,6 +25,10 @@
 
 
 body, html {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: var(--font-color-1);
     /* margin-top: 0px; */
     /* margin-right: 0px;
@@ -34,15 +40,48 @@ body, html {
 
 }
 
-.containment-box{
-/* 
+.contentscroll-div{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    outline: auto;
+}
+
+.cover{
     position: relative;
     width: 100%;
-    height: 35rem;
-    max-height: 35rem; */
-    /* box-shadow: 0px 0px 0px calc(0.5rem ) var(--font-color-1) inset; */
-    /* border: 20px solid; */
+    height: 100%;
 }
+
+
+.scroll-img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    overflow: auto;
+    position: relative;
+    scroll-behavior: smooth;
+
+}
+.child{
+    min-width: 100%;
+    height: 165vw;
+    cursor: pointer;
+    border: 1px solid lightblue;
+    overflow: hidden;
+}
+
+.child-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
 
 
 
@@ -65,10 +104,7 @@ body, html {
     font-size: calc(var(--logo-size-1)*1.47);
 }
 
-.contentbox{
 
-    
-}
 
 .text{
     margin: 0 1em 0 1em;
@@ -86,13 +122,13 @@ body, html {
     color: var(--font-color-1);
     position: fixed;
     transform: translate(50%);
-    top: 88%;
+    top: 85%;
     right: 50%;
  
     background-color: rgba(217, 217, 217, 1);
     font-weight: bold;
     border: 30px;
-    font-size: calc(var(--logo-size-1)*1.47);
+    font-size: var(--button-size-1);
     border-radius: 100px;
     user-select: none;
 }
@@ -107,16 +143,10 @@ body, html {
     /* text-shadow: 2px 5px 0px rgba(46, 31, 39, 0.3); */
 }
 
-.cover-img{
-    object-position: 50% 0;
-    object-fit: cover;
-    width: 100%;
-    /* display: inline; */
-    /* max-width: 95vw; */
-}
 
 
-@media screen and (min-width: 1000px) {
+
+@media screen and (min-width: 900px) {
     :root {
         /*      USE:    
                 var()   
@@ -124,6 +154,8 @@ body, html {
         --font-size-1: 1.2rem;
     
         --logo-size-1: 2rem;
+
+        --button-size-1: calc(var(--logo-size-1)*1);
 
         --heading-margin: 0;
     
@@ -136,11 +168,52 @@ body, html {
     
     }
 
-
+    .contentscroll-div{
+        width: 100%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        outline: auto;
+    }
+    
+    .cover{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    
+    
+    .scroll-img{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        overflow: auto;
+        position: relative;
+        scroll-behavior: smooth;
+    
+    }
+    .child{
+        min-width: 100%;
+        height: 45vw;
+        cursor: pointer;
+        border: 1px solid lightblue;
+        overflow: hidden;
+    }
+    
+    .child-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    
+    }
+    
 
     .bookButton{
-        font-size: calc(var(--logo-size-1)*.8);
-        padding: 1% 5% 1% 5%;
+        font-size: var(--button-size-1);
+        padding: 1% 10% 1% 10%;
         top: 84%;
     }
     
