@@ -31,9 +31,9 @@
     --basecolor-2: calc(var(--cell-size)* .9 ) ;
 }
 
-*{
-    /* outline: auto; */
-}
+/* *{
+    outline: auto;
+} */
 
 
 body, html {
@@ -283,7 +283,7 @@ p{
     }
 
     .scroll-bar-div{
-        width: 100vw;
+        width: 100%;
         height: 98vh;
         display: flex;
         align-items: center;
@@ -304,8 +304,8 @@ p{
     
     .scroll-containers{
         position: relative;
-        width: 100vw;
-
+        width: 100%;
+        height: 100%;
     }
     
     
@@ -342,10 +342,9 @@ p{
 
     .scroll-texts{
         color: var(--basecolor-1);
-        width: 32%;
-        transform: translate(50%);
-        left: -16%;
-        top: -69%;
+        width: 27.58%;
+        /* 27.58% */
+        top: calc(100vh * -0.618 );
         display: flex;
         flex: 1;
         flex-direction: column;
@@ -354,8 +353,8 @@ p{
     }
     .scroll-texts::before{
         z-index: -1;
-        left: -59%;
-        top: -85vh;
+        left: calc(-100vw * 0.618 * 0.618 * 0.618);
+        top: calc(100vh * -0.618 );
         position: absolute;
         content: '';
         display: flex;
