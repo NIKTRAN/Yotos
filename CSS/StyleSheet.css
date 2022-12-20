@@ -7,9 +7,9 @@
     
     --golden-ratio: 1.618;
 
-    --font-size-1: 4.7vw;
+    --font-size-1: 5vw;
     
-    --logo-size-1: calc(var(--font-size-1)*1.618*1.618);
+    --logo-size-1: calc(var(--font-size-1)*2.236);
 
     --button-size-1: calc(var(--logo-size-1)*.718);
 
@@ -18,7 +18,7 @@
 
 
     --heading-margin: 1em;
-    --LR-margins: 2.5em;
+    --LR-margins: calc(100vw * .618 * .618 * .618 * .618 * .618 );
 
     --scroll-height: calc( 100vh - calc(var(--logo-size-1)*1.618) );
     
