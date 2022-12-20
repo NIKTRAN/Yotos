@@ -7,9 +7,9 @@
     
     --golden-ratio: 1.618;
 
-    --font-size-1: 4.7vw;
+    --font-size-1: 5vw;
     
-    --logo-size-1: calc(var(--font-size-1)*1.618*1.618);
+    --logo-size-1: calc(var(--font-size-1)*2.236);
 
     --button-size-1: calc(var(--logo-size-1)*.718);
 
@@ -18,7 +18,7 @@
 
 
     --heading-margin: 1em;
-    --LR-margins: 2.5em;
+    --LR-margins: calc(100vw * .618 * .618 * .618 * .618 * .618 );
 
     --scroll-height: calc( 100vh - calc(var(--logo-size-1)*1.618) );
     
@@ -27,12 +27,13 @@
     --font-family-2: 'Rubik';
     
     --font-color-1: rgba(46, 31, 39, 1);
+    --bright-color-1: rgba(236, 225, 225, 1);
     --basecolor-1: rgba(190, 186, 180, 1);
     --basecolor-2: calc(var(--cell-size)* .9 ) ;
 }
 
 /* *{
-    outline: auto;
+\
 } */
 
 
@@ -155,7 +156,7 @@ p{
 }
 
 .scroll-texts{
-    color: var(--basecolor-1);
+    color: var(--bright-color-1);
     display: flex;
     flex: 1;
     gap: 0em;
@@ -217,10 +218,10 @@ p{
     color: var(--font-color-1);
     position: fixed;
     transform: translate(50%);
-    top: 89%;
+    bottom: 6vh;
     right: 50%;
 
-    background-color: rgba(217, 217, 217, 1);
+    background-color: var(--bright-color-1);
     font-weight: bold;
     border: 30px;
     font-size: var(--button-size-1);
@@ -259,7 +260,7 @@ p{
 
 
 
-        --font-size-1: 1.15em;
+        --font-size-1: calc(4vh * 0.618);
 
         --LR-margins: 6.5em;
     
@@ -271,10 +272,6 @@ p{
     
         --font-family-1: 'Poppins';
         --font-family-2: 'Rubik';
-        
-        --font-color-1: rgba(46, 31, 39, 1);
-        --basecolor-1: rgba(190, 186, 180, 1);
-        --basecolor-2: calc(var(--cell-size)* .9 ) ;
     
     }
 
@@ -283,7 +280,7 @@ p{
     }
 
     .scroll-bar-div{
-        width: 100vw;
+        width: 100%;
         height: 98vh;
         display: flex;
         align-items: center;
@@ -304,8 +301,8 @@ p{
     
     .scroll-containers{
         position: relative;
-        width: 100vw;
-
+        width: 100%;
+        height: 100%;
     }
     
     
@@ -341,11 +338,9 @@ p{
     
 
     .scroll-texts{
-        color: var(--basecolor-1);
-        width: 32%;
-        transform: translate(50%);
-        left: -16%;
-        top: -69%;
+        width: 27.58%;
+        /* 27.58% */
+        top: calc(100vh * -0.618 );
         display: flex;
         flex: 1;
         flex-direction: column;
@@ -354,8 +349,8 @@ p{
     }
     .scroll-texts::before{
         z-index: -1;
-        left: -59%;
-        top: -85vh;
+        left: calc(-100vw * 0.618 * 0.618 * 0.618);
+        top: calc(100vh * -0.618 );
         position: absolute;
         content: '';
         display: flex;
@@ -379,7 +374,7 @@ p{
     .bookButton{
         font-size: var(--button-size-1);
         padding: var(--button-top) var(--button-sides) var(--button-top) var(--button-sides) ;
-        top: 86%;
+            bottom: 6vh;
     }
     .bookButton:hover {
         box-shadow: 0px 0px 0px calc(0.25rem) var(--font-color-1) inset;
