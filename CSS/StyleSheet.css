@@ -162,7 +162,7 @@ p{
     flex-direction: column;
     position: relative;
     z-index: 1;
-    top: -12em;
+    top: calc(-100vh  * 0.618 * 0.618 * 0.618 * 0.618);
     
 }
 
