@@ -217,7 +217,7 @@ p{
     color: var(--font-color-1);
     position: fixed;
     transform: translate(50%);
-    top: 89%;
+    bottom: 6vh;
     right: 50%;
 
     background-color: rgba(217, 217, 217, 1);
