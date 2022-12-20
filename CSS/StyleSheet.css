@@ -27,6 +27,7 @@
     --font-family-2: 'Rubik';
     
     --font-color-1: rgba(46, 31, 39, 1);
+    --bright-color-1: rgba(236, 225, 225, 1);
     --basecolor-1: rgba(190, 186, 180, 1);
     --basecolor-2: calc(var(--cell-size)* .9 ) ;
 }
@@ -155,7 +156,7 @@ p{
 }
 
 .scroll-texts{
-    color: var(--basecolor-1);
+    color: var(--bright-color-1);
     display: flex;
     flex: 1;
     gap: 0em;
@@ -220,7 +221,7 @@ p{
     bottom: 6vh;
     right: 50%;
 
-    background-color: rgba(217, 217, 217, 1);
+    background-color: var(--bright-color-1);
     font-weight: bold;
     border: 30px;
     font-size: var(--button-size-1);
@@ -259,7 +260,7 @@ p{
 
 
 
-        --font-size-1: 1.15em;
+        --font-size-1: calc(4vh * 0.618);
 
         --LR-margins: 6.5em;
     
@@ -271,10 +272,6 @@ p{
     
         --font-family-1: 'Poppins';
         --font-family-2: 'Rubik';
-        
-        --font-color-1: rgba(46, 31, 39, 1);
-        --basecolor-1: rgba(190, 186, 180, 1);
-        --basecolor-2: calc(var(--cell-size)* .9 ) ;
     
     }
 
@@ -341,7 +338,6 @@ p{
     
 
     .scroll-texts{
-        color: var(--basecolor-1);
         width: 27.58%;
         /* 27.58% */
         top: calc(100vh * -0.618 );
@@ -378,7 +374,7 @@ p{
     .bookButton{
         font-size: var(--button-size-1);
         padding: var(--button-top) var(--button-sides) var(--button-top) var(--button-sides) ;
-        top: 86%;
+            bottom: 6vh;
     }
     .bookButton:hover {
         box-shadow: 0px 0px 0px calc(0.25rem) var(--font-color-1) inset;
