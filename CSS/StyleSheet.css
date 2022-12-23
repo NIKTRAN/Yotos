@@ -95,10 +95,12 @@ p{
     overflow: auto;
     position: relative;
     scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
 
 }
 .scroll-items-size{
-
+    scroll-snap-align: start;
     min-width: 100%;
     height: var(--scroll-height);
     /* cursor: pointer; */
