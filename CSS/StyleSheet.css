@@ -51,6 +51,8 @@ body, html {
     z-index: 100;
     background-color: var(--basecolor-1);
 
+    width: 100%;
+
 }
 
 p{
@@ -60,7 +62,7 @@ p{
 }
 
 .scroll-bar-div{
-    width: 100vw;
+    width: 100%;
     height: var(--scroll-height);
     display: flex;
     align-items: center;
@@ -81,7 +83,7 @@ p{
 
 .scroll-containers{
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: var(--scroll-height);
     overflow: hidden;
     
