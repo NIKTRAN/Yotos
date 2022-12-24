@@ -118,8 +118,7 @@ p{
     padding-bottom: 20px; 
     box-sizing: content-box;
     
-    overflow: hidden;
-
+    overflow-y: hidden;
 
 }
 .scroll-items-size{
