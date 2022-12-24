@@ -407,7 +407,7 @@ p{
     }
     .scroll-texts::after{
 
-        opacity: 0;
+        /* opacity: 0; */
 
         /* box-shadow: 100px 1px 0px 30px black; */
         /* calc(24.5rem ) var(--basecolor-1) var() */
