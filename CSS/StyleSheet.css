@@ -62,7 +62,7 @@ p{
 }
 
 .scroll-bar-div{
-    width: 100%;
+    width: 100vw;
     height: var(--scroll-height);
     display: flex;
     align-items: center;
@@ -83,7 +83,7 @@ p{
 
 .scroll-containers{
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: var(--scroll-height);
     overflow: hidden;
     
