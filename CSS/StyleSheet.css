@@ -269,7 +269,7 @@ p{
 
 
 /* and (min-width: 900px) and (min-height: 100px) */
-@media screen and (min-width: 900px) and (min-height: 100px){
+@media screen and (min-width: 600px) and (min-height: 100px){
     :root {
         /*      USE:    
                 var()   
