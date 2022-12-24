@@ -102,7 +102,7 @@ p{
     padding-bottom: 20px; 
     box-sizing: content-box;
     
-    overflow-y: hidden;
+    overflow: hidden;
 
 
 }
@@ -331,7 +331,7 @@ p{
         
         
         overflow-x: scroll;
-        padding-bottom: 20px; 
+        padding-bottom: 120px; 
         box-sizing: content-box;
 
         overflow-y: hidden;
