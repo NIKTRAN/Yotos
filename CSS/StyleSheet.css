@@ -118,8 +118,7 @@ p{
     padding-bottom: 20px; 
     box-sizing: content-box;
     
-    overflow: hidden;
-
+    overflow-y: hidden;
 
 }
 .scroll-items-size{
@@ -407,7 +406,7 @@ p{
     }
     .scroll-texts::after{
 
-        /* opacity: 0; */
+        opacity: 0;
 
         /* box-shadow: 100px 1px 0px 30px black; */
         /* calc(24.5rem ) var(--basecolor-1) var() */
