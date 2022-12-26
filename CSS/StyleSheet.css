@@ -54,7 +54,7 @@ body, html {
     background-color: var(--basecolor-1);
 
     width: 100%;
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 
