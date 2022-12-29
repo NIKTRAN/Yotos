@@ -1,0 +1,31 @@
+:root {
+    /*      USE:    
+            var()   
+    */
+    /* --font-size-1: 4.7vw;
+
+    --logo-size-1: calc(var(--font-size-1)*1.618*1.618);
+
+    --button-size-1: calc(var(--logo-size-1));
+
+    --heading-margin: 1em;
+    --LR-margins: 2.5em;
+
+    --scroll-height: calc( 100vh - calc(var(--logo-size-1)*1.618) ); */
+
+
+
+    --font-size-1: calc(4vh * 0.618);
+
+    --LR-margins: 6.5em;
+
+    --logo-size-1: calc(var(--font-size-1)*1.618 *1.4);
+
+    --button-size-1: calc(var(--logo-size-1) / var(--golden-ratio) * 1.1);
+
+    --heading-margin: 0;
+
+    --font-family-1: 'Poppins';
+    --font-family-2: 'Rubik';
+
+}
