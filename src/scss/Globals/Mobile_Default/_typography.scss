@@ -1,4 +1,7 @@
 
+
+    @use '../_breakpoints.scss' as *;
+
 /* 
 vvvvvvvvvvvvvvvvvvvvvvvvvvvv
     LOGO Typeography
@@ -11,6 +14,12 @@ vvvvvvvvvvvvvvvvvvvvvvvvvvvv
     align-items: center;    
     text-align: center;
     padding: var(--heading-margin) 0 0 0;
+
+
+
+
+
+
 }
 .logo{
     display: inline-block;
@@ -74,33 +83,7 @@ p{
 
 
 
-.scroll-texts{
-    color: var(--bright-color-1);
-    display: flex;
-    flex: 1;
-    gap: 0em;
-    flex-direction: column;
-    position: sticky;
-    z-index: 1;
-    bottom: calc(var(--logo-size-1) + 20vh);
 
-}
-
-.scroll-texts::after{
-    z-index: -1;
-    position: absolute;
-    content: '';
-    display:flex;
-    background-color: var(--font-color-1);
-    width: 200vw;
-    height: 200vh;
-    right: -100%;
-    top: -3vh;
-    filter: blur(40px);
-    /* opacity: 0; */
-    /* box-shadow: 100px 1px 0px 30px black; */
-    /* calc(24.5rem ) var(--basecolor-1) var() */
-}
 
 
 
@@ -109,10 +92,13 @@ p{
 
 
 /* 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    Typeography
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vvvvvvvvvvvvvvvvvvvvvvvvvvvv
+    Screen Typeography
+vvvvvvvvvvvvvvvvvvvvvvvvvvvv
 */
 
+@include myscreen{
+    @import '../Horizontal_Adjustments/_typography.scss';
 
+}  
 

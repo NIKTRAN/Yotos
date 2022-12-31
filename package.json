@@ -5,8 +5,10 @@
   "main": "public/index.html",
   "author": "5t3ph",
   "scripts": {
-    "build:scss": "sass  --no-source-map src/sass:public/dist",
-    "watch:scss": "sass  --no-source-map --watch src/sass:public/dist",
+
+    
+    "build:sass": "sass  --no-source-map src/scss:public/dist",
+    "watch:sass": "sass  --no-source-map --watch src/scss:public/dist",
 
 
     "copy:html": "copyfiles -u 1 ./src/*.html public",

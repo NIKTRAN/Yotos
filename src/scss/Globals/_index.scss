@@ -1,9 +1,10 @@
 
+// @use '_breakpoints.scss' as *;
+
+
 @forward 'import';
 
-@forward 'Mobile';
-
-// @forward 'Horizontal_Adjustments';
+@forward 'Mobile_Default';
 
 @forward 'specsTab';
 

@@ -4,6 +4,22 @@ vvvvvvvvvvvvvvvvvvvvvvvvvvvv
 vvvvvvvvvvvvvvvvvvvvvvvvvvvv
 */
 
+// @use '../../Horizontal_Adjustments/Features/_cover_Scroll.scss' as *;
+
+
+@use '../../_breakpoints.scss' as *;
+
+
+
+    /* 
+
+        @use '../../_breakpoints.scss' as *;
+
+
+        @include myscreen{
+
+        }
+    */
 
 .bookButton{
 
@@ -25,13 +41,32 @@ vvvvvvvvvvvvvvvvvvvvvvvvvvvv
     font-size: var(--button-size-1);
     border-radius: 100px;
     user-select: none;
+
+
+    // @include myscreen{
+    //     font-size: var(--button-size-1);
+    //     padding: var(--button-top) var(--button-sides) var(--button-top) var(--button-sides) ;
+    //     bottom: 5vh;
+    // }
 }
 
 .bookButton:hover {
     box-shadow: 0px 0px 0px calc(0.5rem) var(--font-color-1) inset;
     border-color: var(--font-color-1) ;
     /* text-shadow: 2px 5px 0px rgba(46, 31, 39, 0.3); */
+
+
+    // @include myscreen{
+    //     box-shadow: 0px 0px 0px calc(0.30vw) var(--font-color-1) inset;
+    //     border-color: var(--font-color-1) ;
+    //     /* text-shadow: 2px 5px 0px rgba(46, 31, 39, 0.3); */
+
+    // }
+
+
+
 }
+
 
 
 /* 
@@ -39,3 +74,7 @@ vvvvvvvvvvvvvvvvvvvvvvvvvvvv
     Book Button
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 */
+
+@include myscreen{
+    @import '../../Horizontal_Adjustments/Features/_buttons.scss';
+}    

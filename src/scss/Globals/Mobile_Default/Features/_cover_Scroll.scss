@@ -1,3 +1,7 @@
+
+
+@use '../../_breakpoints.scss' as *;
+
 /* 
 vvvvvvvvvvvvvvvvvvvvvvvvvvvv
     COVER SCROLL
@@ -12,6 +16,15 @@ vvvvvvvvvvvvvvvvvvvvvvvvvvvv
     flex-direction: column;
     justify-content: space-between;
     /* outline: auto; */
+
+
+
+    // @include myscreen{
+    //     width: 100%;
+    //     height: 101vh;
+    //     /* outline: auto; */
+    // }    
+
 }
 
 .scroll-bar-div::after{
@@ -22,6 +35,13 @@ vvvvvvvvvvvvvvvvvvvvvvvvvvvv
     /* background-color: blue; */
     /* box-shadow: 0px 0px 80px calc(20.8rem ) var(--basecolor-1); */
 
+
+
+    // @include myscreen{
+
+    // }    
+
+
 }
 
 .scroll-containers{
@@ -29,6 +49,13 @@ vvvvvvvvvvvvvvvvvvvvvvvvvvvv
     width: 100vw;
     height: var(--scroll-height);
     overflow: hidden;
+
+
+    // @include myscreen{
+    //     width: 100%;
+    //     height: 101vh;
+    //     overflow: hidden;
+    // }    
     
 }
 
@@ -49,6 +76,12 @@ vvvvvvvvvvvvvvvvvvvvvvvvvvvv
     
     overflow-y: hidden;
 
+
+    // @include myscreen{
+    //     height: 101vh;
+    //     padding-bottom: 120px; 
+    // }    
+
 }
 .scroll-items-size{
     scroll-snap-stop: always;
@@ -60,6 +93,13 @@ vvvvvvvvvvvvvvvvvvvvvvvvvvvv
     
     overflow: hidden;
 
+
+    // @include myscreen{
+    //     overflow: hidden;
+    //     min-width: 100%;
+    //     height: 101vh;
+    // }    
+
 }
 
 .scroll-img{
@@ -67,6 +107,15 @@ vvvvvvvvvvvvvvvvvvvvvvvvvvvv
     width: 100%;
     height: 70%;
     object-fit: cover;
+
+    // @include myscreen{
+    //     position: relative;
+    //     left: 24%;
+    //     z-index: 1;
+    //     width: 100%;
+    //     height: 100%;
+    //     object-fit: cover;
+    // }    
 
 }
 
@@ -98,6 +147,54 @@ vvvvvvvvvvvvvvvvvvvvvvvvvvvv
     z-index: 1;
     bottom: calc(var(--logo-size-1) + 20vh);
 
+
+    
+    // @include myscreen{
+    //     width: 27.58%;
+    //     /* 27.58% */
+    //     top: calc(100% * -0.618 );
+    //     display: flex;
+    //     flex: 1;
+    //     flex-direction: column;
+    //     position: relative;
+    //     z-index: 1;
+    // }
+
+}
+
+.scroll-texts::after{
+    z-index: -1;
+    position: absolute;
+    content: '';
+    display:flex;
+    background-color: var(--font-color-1);
+    width: 200vw;
+    height: 200vh;
+    right: -100%;
+    top: -3vh;
+    filter: blur(40px);
+    /* opacity: 0; */
+    /* box-shadow: 100px 1px 0px 30px black; */
+    /* calc(24.5rem ) var(--basecolor-1) var() */
+
+    // @include myscreen{
+    //     opacity: 0;
+    // }
+}
+
+.scroll-texts{
+    color: var(--bright-color-1);
+    display: flex;
+    flex: 1;
+    gap: 0em;
+    flex-direction: column;
+    position: sticky;
+    z-index: 1;
+    bottom: calc(var(--logo-size-1) + 20vh);
+
+
+
+
 }
 
 .scroll-texts::after{
@@ -116,8 +213,19 @@ vvvvvvvvvvvvvvvvvvvvvvvvvvvv
     /* calc(24.5rem ) var(--basecolor-1) var() */
 }
 
+
+
 /* 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
     COVER SCROLL
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 */
+
+
+
+
+@include myscreen{
+    @import '../../Horizontal_Adjustments/Features/_cover_Scroll.scss';
+}    
+
+

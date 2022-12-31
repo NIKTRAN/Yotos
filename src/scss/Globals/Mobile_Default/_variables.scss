@@ -1,4 +1,11 @@
 
+
+
+
+@use '../_breakpoints.scss' as *;
+
+
+
 :root {
     /*      USE:    
             var()   
@@ -31,4 +38,38 @@
     --bright-color-1: rgba(236, 225, 225, 1);
     --basecolor-1: rgba(190, 186, 180, 1);
     --basecolor-2: calc(var(--cell-size)* .9 ) ;
+
+
+    // @include myscreen{
+
+    //     --font-size-1: calc(4vh * 0.618);
+
+    //     --LR-margins: 6.5em;
+    
+    //     --logo-size-1: calc(var(--font-size-1)*1.618 *1.4);
+
+    //     --button-size-1: calc(var(--logo-size-1) / var(--golden-ratio) * 1.1);
+
+    //     --heading-margin: 0;
+    
+    //     --font-family-1: 'Poppins';
+    //     --font-family-2: 'Rubik';
+    
+    // }
 }
+/* 
+vvvvvvvvvvvvvvvvvvvvvvvvvvvv
+    Screen Veriables
+vvvvvvvvvvvvvvvvvvvvvvvvvvvv
+*/
+
+@include myscreen{
+    @import '../Horizontal_Adjustments/_variables.scss';
+
+}  
+
+
+
+
+
+
