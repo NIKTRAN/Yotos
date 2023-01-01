@@ -60,13 +60,28 @@ const title = document.getElementById('title');
 const description = document.getElementById('description');
 
 
-const imageIndexes = [1,2];
+const slide_cards_Indexes = [1,2];
 
 
 var test_text = 'Cras ornare arcu dui vivamus arcu. Jemortis ras ornare arcu dui vivamus arcu.';
 
 
-imageIndexes.reverse().forEach( (i) =>{
+
+
+// var cover_text;
+
+
+// const fs = require('fs');
+// const readline = require( 'readline');
+  
+// fs.readFile('Input.txt', 'utf-8', (err, data) => {
+//     if (err) throw err;
+  
+//     console.log(data.toString());
+// })
+
+
+slide_cards_Indexes.reverse().forEach( (i) =>{
 
     var fetch = document.getElementById('gallery').innerHTML;
 
@@ -81,43 +96,6 @@ imageIndexes.reverse().forEach( (i) =>{
         </div>
 
     </div>`     + fetch;
-
-
-
-    // const cover_item = document.createElement('li');
-
-    // cover_item.alt = `cover-item-${i}`;
-    // cover_item.classList.add('scroll-items-size');
-
-
-    // const image = document.createElement('img');
-
-    // image.src = `../Images/cover-img-${i}.jpg`;
-    // image.alt = `cover-image-${i}`;
-    // image.classList.add('scroll-img');
-
-
-    // const title = document.createElement('p');
-
-    // title.content = `CAT ${i}`;
-    // title.alt = `cover-title-${i}`;
-    // title.classList.add('text title');
-
-
-    // const text = document.createElement('p');
-
-    // text.content = test_text;
-    // text.alt = `cover-text-${i}`;
-    // text.classList.add('text');
-
-    // gallery.appendChild(cover_item);
-    
-    // cover_item.appendChild(image);
-    // cover_item.appendChild(title);
-    // cover_item.appendChild(text);
-
-
-
 })
 
 
