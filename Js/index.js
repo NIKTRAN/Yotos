@@ -5,7 +5,7 @@
 
 
 
-var seconds = 6;
+var seconds = 7;
 var noScroll = true;
 const timerText = document.getElementById('timer');
 
@@ -13,13 +13,15 @@ const timerText = document.getElementById('timer');
 function updatecountdown() {
     timerText.innerHTML  = (seconds);
 
-    if(seconds > 0) {
-        seconds--;
-    }
+
 
     if(seconds == 0 && noScroll == true){
         document.getElementById('sectionCover').scrollIntoView();
         firststimescroll = false;
+    }
+
+    if(seconds > 0) {
+        seconds--;
     }
 }
 
@@ -32,7 +34,7 @@ function inactivityTime() {
     setInterval (updatecountdown, 1000);
 
     function resetTime(){
-        noScroll = false;
+        seconds = 60;
     }
 
 };
