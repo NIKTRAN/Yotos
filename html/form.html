@@ -1,5 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+    <script>
+           
+        function phoneformat(){
+ 
+            const inital = document.getElementById('phoneNumber');
+            const validatePhoneNumberRegex = /^\(?(\d{3})\)?[-]?(\d{3})[-]?(\d{3})$/
+            const modfiedval = validatePhoneNumberRegex.test(inital.value)
+            if(modfiedval == false){
+                inital.style.borderColor = "red";
+            }
+            else{
+                inital.style.borderColor = "black";
+            }
+        }
+    </script>
+
 <head>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="/CSS/form.css">
@@ -28,11 +44,11 @@
             </div>
             <div class="input-details">
                 <span class="detials">Phone Number</span>
-                <input type="text" placeholder="Enter Your phone number" required>
+                <input onkeydown = "phoneformat()" type="text" id ="phoneNumber" placeholder="Enter Your phone number" required>
             </div>
             <div class="input-details">
                 <span class="detials">Choose a Day</span>
-                <input type="text" placeholder="Enter A Date" required>
+                <input type="date" placeholder="Enter A Date" required>
             </div>
         </div>
         <div class="phototype">
