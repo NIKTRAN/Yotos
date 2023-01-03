@@ -1,0 +1,41 @@
+/* 
+vvvvvvvvvvvvvvvvvvvvvvvvvvvv
+    Book Button
+vvvvvvvvvvvvvvvvvvvvvvvvvvvv
+*/
+
+
+.bookButton{
+
+    z-index: 5;
+
+    padding: 2% var(--button-sides) 2% var(--button-sides);
+    display: inline-block;
+    width: max-content;
+    font-family: var(--font-family-2);
+    color: var(--font-color-1);
+    position: fixed;
+    transform: translate(50%);
+    bottom: var(--button-sides-bottom-gap);
+    right: 50%;
+
+    background-color: var(--bright-color-1);
+    font-weight: bold;
+    border: 30px;
+    font-size: var(--button-size-1);
+    border-radius: 100px;
+    user-select: none;
+}
+
+.bookButton:hover {
+    box-shadow: 0px 0px 0px calc(0.5rem) var(--font-color-1) inset;
+    border-color: var(--font-color-1) ;
+    /* text-shadow: 2px 5px 0px rgba(46, 31, 39, 0.3); */
+}
+
+
+/* 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Book Button
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*/
