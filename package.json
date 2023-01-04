@@ -21,6 +21,10 @@
     "watch:Js": "onchange \"/src/Js/**/*\" -- npm run copy:Js",
 
 
+    "copy:txt": "copyfiles -u 1 ./src/txt/**/* public",
+    "watch:txt": "onchange \"/src/txt/**/*\" -- npm run copy:txt",
+
+
 
 
     "watch:html": "onchange \" src/*.html \" -- npm run copy:html",
