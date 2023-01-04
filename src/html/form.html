@@ -1,5 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+    <script>
+           
+        function phoneformat(){
+ 
+            const inital = document.getElementById('phoneNumber');
+            const validatePhoneNumberRegex = /^\(?(\d{3})\)?[-]?(\d{3})?[-]?(\d{3,4})$/
+            console.log(inital.value)
+            const modfiedval = validatePhoneNumberRegex.test(inital.value)
+            if(modfiedval == false){
+                inital.style.borderColor = "red";
+            }
+            else{
+                inital.style.borderColor = "black";
+            }
+        }
+
+        function confirm(){
+            document.getElementById("beforesubmit").style.display = "none";
+            document.getElementById("confirmation").style.visibility = "visible";
+            document.getElementById("emailConfirmation").innerHTML = document.getElementById("beforeEmail").value
+            document.getElementById("nameConfirmation").innerHTML = document.getElementById("beforeName").value
+        }   
+    </script>
 <head>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="/CSS/form.css">
@@ -14,48 +37,52 @@
             <h class = "logo2">media</h>
         </div>
     </div>
-    <div class = "container">
+    <div id="beforesubmit" class = "container">
+            <form action ="MainPage.html"></form>
+            <div class="userdetails">
+                <div class="input-details">
+                    <span class="detials">Full Name</span>
+                    <input id="beforeName" type="text" placeholder="Enter Your Name" required>
+                </div>
+                <div class="input-details">
+                    <span class="detials">Email</span>
+                    <input id="beforeEmail" type="text" placeholder="Email" required>
+                </div>
+                <div class="input-details">
+                    <span class="detials">Phone Number</span>
+                    <input onkeydown = "phoneformat()" type="text" id ="phoneNumber" placeholder="Enter Your phone number" required>
+                </div>
+                <div class="input-details">
+                    <span class="detials">Choose a Day</span>
+                    <input type="date" placeholder="Enter A Date" required>
+                </div>
+            </div>
+            <div class="phototype">
+                <input type="radio" name = "typeof" id = "photo-dot">
+                <input type="radio" name = "typeof" id = "video-dot">
+                <span class="phototitle">What service are you seeking?</span>
+                <div class="catogories">
+                    <label for = "photo-dot">
+                        <span class="option one"></span>
+                        <span class="type">Photo</span>
+                    </label>
 
-        <form action ="MainPage.html"></form>
-        <div class="userdetails">
-            <div class="input-details">
-                <span class="detials">Full Name</span>
-                <input type="text" placeholder="Enter Your Name" required>
-            </div>
-            <div class="input-details">
-                <span class="detials">Email</span>
-                <input type="text" placeholder="Email" required>
-            </div>
-            <div class="input-details">
-                <span class="detials">Phone Number</span>
-                <input type="text" placeholder="Enter Your phone number" required>
-            </div>
-            <div class="input-details">
-                <span class="detials">Choose a Day</span>
-                <input type="text" placeholder="Enter A Date" required>
+                    <label for = "video-dot">
+                        <span class="option two"></span>
+                        <span class="type">Video</span>
+                    </label>
+                </div>
+
+                </div>
+                <div class="button">
+                    <input onClick="confirm()" type="submit" value = "Book Now">
+                </div>
             </div>
         </div>
-        <div class="phototype">
-            <input type="radio" name = "typeof" id = "photo-dot">
-            <input type="radio" name = "typeof" id = "video-dot">
-            <span class="phototitle">What service are you seeking?</span>
-            <div class="catogories">
-                <label for = "photo-dot">
-                    <span class="option one"></span>
-                    <span class="type">Photo</span>
-                </label>
-
-                <label for = "video-dot">
-                    <span class="option two"></span>
-                    <span class="type">Video</span>
-                </label>
-            </div>
-
-            </div>
-            <div class="button">
-                <input type="submit" value = "Book Now">
-            </div>
-        </div>
+    </div>
+    <div id="confirmation" class="container" style="visibility:hidden" >
+        <h1>All Set, Thank You <span id="nameConfirmation"></span></h1>
+        <p class="detials">An email will be sent to <span id="emailConfirmation"></span></p>
     </div>
 
 </body>
