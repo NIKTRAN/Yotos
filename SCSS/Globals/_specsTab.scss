@@ -1,0 +1,37 @@
+/* 
+vvvvvvvvvvvvvvvvvvvvvvvvvvvv
+    specs-test
+vvvvvvvvvvvvvvvvvvvvvvvvvvvv
+*/
+
+.specs-test{
+
+    padding: 1rem 1rem 1rem 1rem;
+    /* opacity: 0; */
+    /* opacity: 1; */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: calc(var(--font-size-1) * 1.618 ); 
+    font-weight: bold;
+
+    color: rgb(13, 212, 13);
+
+    width: 50vw;
+    height: max(30vh);
+    align-self: end;
+    text-align: right;
+
+    
+    position: fixed;
+    top: 15%;
+    z-index: 10;
+
+    -webkit-text-stroke: 1px rgb(2, 2, 2);
+    border: 0.3vw solid black;
+    background-color: rgba(102, 102, 102, 0.5);
+    border-radius: 15px;
+
+}
+
+#timer::after{
+content: ' SECONDS';
+}
