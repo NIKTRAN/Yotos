@@ -12,22 +12,25 @@
 
 
     "copy:html": "copyfiles -u 1 ./src/*.html public",
+    "watch:html": "onchange \" src/*.html \" -- npm run copy:html",
+
+
     "copy": "npm-run-all --parallel copy:*",
     
     "copy:Images": "copyfiles -u 1 ./src/Images/**/* public",
     "watch:Images": "onchange \" /src/Images/**/* \" -- npm run copy:Images",
 
     "copy:Js": "copyfiles -u 1 ./src/Js/**/* public",
-    "watch:Js": "onchange \"/src/Js/**/*\" -- npm run copy:Js",
+    "watch:Js": "onchange \" /src/Js/**/* \" -- npm run copy:Js",
 
 
     "copy:txt": "copyfiles -u 1 ./src/txt/**/* public",
-    "watch:txt": "onchange \"/src/txt/**/*\" -- npm run copy:txt",
+    "watch:txt": "onchange \" /src/txt/**/* \" -- npm run copy:txt",
 
 
 
 
-    "watch:html": "onchange \" src/*.html \" -- npm run copy:html",
+    
     "watch": "npm-run-all --parallel watch:*",
     "serve": "browser-sync start --server public --files public",
     "start": "npm-run-all copy --parallel watch serve",
