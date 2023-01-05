@@ -1,0 +1,53 @@
+
+[
+    {
+        "title": "Full name",
+
+        "id":"beforeName",
+
+        "type":"text",
+
+        "placeholder" : "Enter Your Name",
+        
+        "size": ""
+    },
+
+    {
+        "title": "Email",
+
+        "id":"beforeName",
+
+        "type":"text",
+
+        "placeholder" : "ExampleEmail@email.com",
+        
+        "size": ""
+    },
+
+    {
+        "title": "Phone number",
+
+        "id":"phoneNumber",
+
+        "type":"text",
+
+        "placeholder" : "Enter Your phone numbers",
+        
+        "size": ""
+    },
+    
+
+    {
+        "title": "Choose a Day",
+
+        "id":"date",
+
+        "type":"date",
+
+        "placeholder" : "Enter A Date",
+        
+        "size": ""
+    }
+]
+
+

@@ -1,33 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    <script>
-           
-        function phoneformat(){
- 
-            const inital = document.getElementById('phoneNumber');
-            const validatePhoneNumberRegex = /^\(?(\d{3})\)?[-]?(\d{3})?[-]?(\d{3,4})$/
-            console.log(inital.value)
-            const modfiedval = validatePhoneNumberRegex.test(inital.value)
-            if(modfiedval == false){
-                inital.style.borderColor = "red";
-            }
-            else{
-                inital.style.borderColor = "black";
-            }
-        }
 
-        function confirm(){
-            document.getElementById("beforesubmit").style.display = "none";
-            document.getElementById("confirmation").style.visibility = "visible";
-            document.getElementById("emailConfirmation").innerHTML = document.getElementById("beforeEmail").value
-            document.getElementById("nameConfirmation").innerHTML = document.getElementById("beforeName").value
-        }   
-    </script>
 <head>
+
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="/CSS/form.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no">
+
+    <script src="/Js/form.js" defer></script>
     <title>Form</title>
 </head>
 <body>
@@ -39,7 +20,11 @@
     </div>
     <div id="beforesubmit" class = "container">
             <form action ="MainPage.html"></form>
-            <div class="userdetails">
+            <div id ="userdetails" class="userdetails">
+
+                <!-- DYNAMICCALLY ADDED DEATILS ~ -->
+
+            <!-- 
                 <div class="input-details">
                     <span class="detials">Full Name</span>
                     <input id="beforeName" type="text" placeholder="Enter Your Name" required>
@@ -56,11 +41,20 @@
                     <span class="detials">Choose a Day</span>
                     <input type="date" placeholder="Enter A Date" required>
                 </div>
+             -->
+
+
+
             </div>
+
+
             <div class="phototype">
                 <input type="radio" name = "typeof" id = "photo-dot">
                 <input type="radio" name = "typeof" id = "video-dot">
                 <span class="phototitle">What service are you seeking?</span>
+
+
+
                 <div class="catogories">
                     <label for = "photo-dot">
                         <span class="option one"></span>
@@ -71,6 +65,9 @@
                     <span class="option two"></span>
                     <span class="type">Video</span>
                 </label>
+
+
+                
             </div>
 
             </div>
