@@ -23,7 +23,7 @@ body{
     align-items: center;
     color: var(--font-color-1);
     font-family: var(--font-family-1);
-    background-image: url(/Yotos/Images/lights.jpg);
+    background-image: url(../Images/lights.jpg);
     background-size: cover;
     background-position: center;
     padding:15px;
@@ -144,11 +144,3 @@ input[type = "radio"]{
 }
 
 
-
-
-.details-size-full{
-
-
-
-
-}
