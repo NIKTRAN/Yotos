@@ -1,3 +1,16 @@
+
+function create_field(title, id, type, placeholder, size) {
+    return (
+        `<div class="input-details">
+            <span class="detials">${title}</span>
+            <input id="${id}" type="${type}" placeholder="${placeholder}" required>
+        </div>`
+    );
+}
+
+
+
+
 function phoneformat(){
  
     const inital = document.getElementById('phoneNumber');
@@ -10,7 +23,11 @@ function phoneformat(){
     else{
         inital.style.borderColor = "black";
     }
+
+    console.log("Work?");
+
 }
+
 
 function confirm(){
     document.getElementById("beforesubmit").style.display = "none";
@@ -18,6 +35,36 @@ function confirm(){
     document.getElementById("emailConfirmation").innerHTML = document.getElementById("beforeEmail").value
     document.getElementById("nameConfirmation").innerHTML = document.getElementById("beforeName").value
 }   
+
+
+
+
+
+const userdetails = document.getElementById('userdetails');
+
+//ASYNC FUNCTION
+async function Cover_Info() {
+    const response = await fetch("../txt/Form-fields.txt");
+
+    const text = await response.text();
+
+    const obj = JSON.parse(text);
+
+    obj.forEach((details_obj) => {
+        // console.log(`TITLE: ${details_obj.title}, DESC: ${details_obj.type}`);
+        userdetails.innerHTML += create_field(details_obj.title, details_obj.id, details_obj.type, details_obj.placeholder, details_obj.size);
+    });
+
+    document.getElementById('phoneNumber').addEventListener('keyup', phoneformat);
+
+
+}
+Cover_Info();
+
+
+
+
+
 
 
 
@@ -45,31 +92,4 @@ function confirm(){
 // </div>
 
 
-function create_field(title, id, type, placeholder, size) {
-    return (
-        `<div class="input-details">
-            <span class="detials">${title}</span>
-            <input id="${id}" type="${type}" placeholder="${placeholder}" required>
-        </div>`
-    );
-}
-
-
-
-const userdetails = document.getElementById('userdetails');
-
-//ASYNC FUNCTION
-async function Cover_Info() {
-    const response = await fetch("../txt/Form-fields.txt");
-
-    const text = await response.text();
-
-    const obj = JSON.parse(text);
-
-    obj.forEach((details_obj) => {
-        console.log(`TITLE: ${details_obj.title}, DESC: ${details_obj.type}`);
-        userdetails.innerHTML += create_field(details_obj.title, details_obj.id, details_obj.type, details_obj.placeholder, details_obj.size);
-    });
-}
-Cover_Info();
 
